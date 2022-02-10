@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+{% block main %}
+    <div class='container'>
+        <div class='jumbotron'>
+            <h2>Hello {{ name }}!</h2>
+            <h3>You have logged {{ total }} {{ units }} swimming in {{ year }}!</h3>
+        </div>
+    </div>
+
+    <div class='container'>
+        <img src="/static/poolSwimmers.jpg" alt="Swimmers in a Pool" >
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Monthly Results
+{% endblock %}
+
+{% block main %}
+    <div class='container'>
+        <h2>Monthly Totals</h2>
+        <table class='table table-striped table-bordered border-3 table-hover'>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Distance</th>
+                    <th>Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for month in monthlyTotals %}
+                    <tr>
+                        <td>{{ month.year }}</td>
+                        <td>{{ month.month}}</td>
+                        <td>{{ month.distance}}</td>
+                        <td>{{ units}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class='container'>
+        <h2>Yearly Totals</h2>
+        <table class='table table-striped table-bordered border-3 table-hover'>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Distance</th>
+                    <th>Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for year in yearTotals %}
+                    <tr>
+                        <td>{{ year.year }}</td>
+                        <td>{{ year.distance}}</td>
+                        <td>{{ units}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

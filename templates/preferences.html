@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Preferences
+{% endblock %}
+
+{% block main %}
+    <div class='container'>
+        <form action="/preferences" method="post">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="units" id="yards" value="yards" checked>
+              <label class="form-check-label" for="yards">
+                yards
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="units" id="meters" value="meters">
+              <label class="form-check-label" for="meters">
+                meters
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="units" id="miles" value="miles">
+              <label class="form-check-label" for="miles">
+                miles
+              </label>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Change Units</button>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
